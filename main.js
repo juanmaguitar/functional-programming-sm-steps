@@ -44,9 +44,31 @@ function pluck(arr, propertyName) {
   return arr.map(getItem(propertyName));
 }
 
+function combineArrays(arr1, arr2, finalArr) {
+  // Just so we don't have to remember to pass an empty array as the third
+  // argument when calling this function, we'll set a default.
+  finalArr = finalArr || [];
+
+  // Push the current element in each array into what we'll eventually return
+  finalArr.push([arr1[0], arr2[0]]);
+
+  var remainingArr1 = arr1.slice(1),
+      remainingArr2 = arr2.slice(1);
+
+  // If both arrays are empty, then we're done
+  if(remainingArr1.length === 0 && remainingArr2.length === 0) {
+    return finalArr;
+  }
+  else {
+    // Recursion!
+    return combineArrays(remainingArr1, remainingArr2, finalArr);
+  }
+};
+
+
 var populations = pluck(data, 'population');
 var allTemperatures = pluck(data, 'temperatures');
 var averageTemps = allTemperatures.map(averageForArray);
+var processed = combineArrays(averageTemps, populations);
 
-console.log( populations );
-console.log( averageTemps );
+console.log( processed )
