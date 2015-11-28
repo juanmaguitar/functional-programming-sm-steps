@@ -18,20 +18,10 @@ var data = [
 
 // Imperative Style
 
-var coords = [],
-    totalTemperature = 0,
-    averageTemperature = 0;
+// Functional Programming Style
 
-for (var i=0; i < data.length; i++) {
-  totalTemperature = 0;
-
-  for (var j=0; j < data[i].temperatures.length; j++) {
-    totalTemperature += data[i].temperatures[j];
-  }
-
-  averageTemperature = totalTemperature / data[i].temperatures.length;
-
-  coords.push([averageTemperature, data[i].population]);
-}
-
-console.log(coords);
+/*
+1. All of your functions must accept at least one argument.
+2. All of your functions must return data or another function.
+3. No loops!
+*/
