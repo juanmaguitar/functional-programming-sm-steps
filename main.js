@@ -18,23 +18,25 @@ var data = [
 
 // Functional Programming Style
 
-
+/*
 function addNumbers(a, b) {
   return a + b;
 }
+*/
 
-function totalForArray(arr, currentTotal) {
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
-  currentTotal = addNumbers(currentTotal, arr[0]);
-  var remainingList = arr.slice(1);
+// The reduce method takes a function as its first argument, and that function
+// accepts both the current item in the list and the current total result from
+// whatever calculation you're performing.
 
-  if(remainingList.length > 0) {
-    return totalForArray(remainingList, currentTotal);
-  }
-  else {
-    return currentTotal;
-  }
-}
+var totalTemp = [1,2,3,4].reduce(function(previousValue, currentValue){
 
-console.log( totalForArray([1,2,3,4],0) );
+  // After this calculation is returned, the next currentValue will be
+  // previousValue + currentValue, and the next previousValue will be the
+  // next item in the array.
+  return previousValue + currentValue;
+});
+
+console.log( totalTemp );
 
