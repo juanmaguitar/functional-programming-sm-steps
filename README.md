@@ -1,4 +1,6 @@
-# functional-programming-sm-steps
+# Functional Programming Exercise (step by step)
+
+This exercise and the steps have been gotten from the post [Don’t Be Scared Of Functional Programming](http://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/) written by [Jonathon Morgan](http://twitter.com/jonathonmorgan) 
 
 ## Exercise 
 
@@ -165,7 +167,3 @@ To go to a step
 To go to latest revision
 
     git checkout master
-
-## Comments
-
-This exercise and the steps have been gotten from the post [Don’t Be Scared Of Functional Programming](http://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/) written by [Jonathon Morgan](http://twitter.com/jonathonmorgan) 
