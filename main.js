@@ -36,4 +36,12 @@ function averageForArray(arr) {
 
 var averageTemp = averageForArray([1,2,3,4]);
 
-console.log( averageTemp );
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+// The map method takes a single argument, the current item in the list. Check
+// out the link above for more complete examples.
+var allTemperatures = data.map(function(item) {
+  return item.temperatures;
+});
+
+console.log( allTemperatures );
