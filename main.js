@@ -20,6 +20,10 @@ function addNumbers(a, b) {
   return a + b;
 }
 
-var totalTemp = [1,2,3,4].reduce(addNumbers);
+function totalForArray(arr) {
+  return arr.reduce(addNumbers);
+}
+
+var totalTemp = totalForArray([1,2,3,4]);
 
 console.log( totalTemp );
