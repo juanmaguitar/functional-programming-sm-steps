@@ -16,14 +16,24 @@ var data = [
   }
 ];
 
+// Functional Programming Style
+
 function addNumbers(a, b) {
   return a + b;
+}
+
+function average(total, count) {
+  return total / count;
 }
 
 function totalForArray(arr) {
   return arr.reduce(addNumbers);
 }
 
-var totalTemp = totalForArray([1,2,3,4]);
+function averageForArray(arr) {
+  return average(totalForArray(arr), arr.length);
+}
 
-console.log( totalTemp );
+var averageTemp = averageForArray([1,2,3,4]);
+
+console.log( averageTemp );
