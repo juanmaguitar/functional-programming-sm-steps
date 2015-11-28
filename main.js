@@ -65,10 +65,12 @@ function combineArrays(arr1, arr2, finalArr) {
   }
 };
 
-
-var populations = pluck(data, 'population');
-var allTemperatures = pluck(data, 'temperatures');
-var averageTemps = allTemperatures.map(averageForArray);
-var processed = combineArrays(averageTemps, populations);
+var processed = combineArrays(
+      // 1st array w/ average temperatures
+      pluck(data, 'temperatures')
+        .map(averageForArray),
+      // 2nd array w/ populations
+      pluck(data, 'population')
+    );
 
 console.log( processed )
