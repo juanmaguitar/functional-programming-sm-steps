@@ -34,14 +34,12 @@ function averageForArray(arr) {
   return average(totalForArray(arr), arr.length);
 }
 
-var averageTemp = averageForArray([1,2,3,4]);
+function getItem(propertyName) {
+  return function(item) {
+    return item[propertyName];
+  };
+}
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-
-// The map method takes a single argument, the current item in the list. Check
-// out the link above for more complete examples.
-var allTemperatures = data.map(function(item) {
-  return item.temperatures;
-});
+var allTemperatures = data.map( getItem('temperatures') );
 
 console.log( allTemperatures );
