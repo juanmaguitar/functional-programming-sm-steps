@@ -16,12 +16,18 @@ var data = [
   }
 ];
 
-// Imperative Style
-
 // Functional Programming Style
 
-/*
-1. All of your functions must accept at least one argument.
-2. All of your functions must return data or another function.
-3. No loops!
-*/
+// First we need to sum all elements of the array
+
+// the "for" way would be
+
+function totalForArray(arr) {
+  var total = 0;
+  for (var i=0; i<arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+
+console.log( totalForArray([1,2,3,4]) )
