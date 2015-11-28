@@ -46,6 +46,7 @@ function pluck(arr, propertyName) {
 
 var populations = pluck(data, 'population');
 var allTemperatures = pluck(data, 'temperatures');
+var averageTemps = allTemperatures.map(averageForArray);
 
 console.log( populations );
-console.log( allTemperatures );
+console.log( averageTemps );
