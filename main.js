@@ -40,6 +40,12 @@ function getItem(propertyName) {
   };
 }
 
-var allTemperatures = data.map( getItem('temperatures') );
+function pluck(arr, propertyName) {
+  return arr.map(getItem(propertyName));
+}
 
+var populations = pluck(data, 'population');
+var allTemperatures = pluck(data, 'temperatures');
+
+console.log( populations );
 console.log( allTemperatures );
